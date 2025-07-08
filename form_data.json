@@ -1,0 +1,16 @@
+{ "person"   : { "title"    : "Person"
+               , "subtitle" : "Adresse_erfassen"
+               , "icon"     : "vw-edit"
+               , "info"     : "Name Vorname"
+               , "form"     : [ { "l" : "Name"     , "v" : "Name"         , "n" : "name"                            }
+                              , { "l" : "Vorname"  , "v" : "Vorname"      , "n" : "firstname"                       }
+                              , { "l" : "Strasse"  , "v" : "Strasse"      , "n" : "street"                          }
+                              , { "l" : "PLZ"      , "v" : "09110"        , "n" : "postalcode"                      }
+                              , { "l" : "Ort"      , "v" : "Chemnitz"     , "n" : "city"                            }
+                              , { "l" : "Telefon"  , "v" : "Telefon"      , "n" : "phone"       , "t" : "tel"       }
+                              , { "l" : "Code"     , "v" : "PW3432"       , "n" : "passwrd"     , "t" : "password"  }
+                              , { "l" : "eMail"    , "v" : "a@b.c"        , "n" : "mail"        , "t" : "email"     }
+                            ]
+              }
+
+}                                  
