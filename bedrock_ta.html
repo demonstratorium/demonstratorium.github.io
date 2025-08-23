@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name= "description" content= "dTPM digital InnoFonds, Maintenance, Maßnahmen, Aufgaben, Ersatzteile, Workflow">
+    <meta name= "keywords"    content= "AWS, serverless, moduleless, analytics, multiTable">
+    <meta name= "author"      content= "Steffen Wolf">
+    <meta name= "viewport"    content= "width=device-width, initial-scale=1.0">
+	
+	<meta property="og:title" 		content="Bedrock by wolfsflow" />
+    <meta property="og:description" content="aws bedrock ai in use" />
+	<meta property="og:video" 		content="qsk.webm" />
+	<meta property="og:type"  		content="website" />
+	<meta property="og:image" 		content="logo_idsearch.png" />
+	
+	<link rel="icon" type="image/png" href="logo_idsearch.png">
+    <link rel="stylesheet" href="main.min.css">
+    <title>AI@awsBedrock</title>
+    </head>    
+<body>
+    <!-- ICONS --><svg def id=icons></svg><!-- display:none soll nicht sichtbar sein hier sind die verwendeten ICONS aus der GroupUI -->
+    <!-- MODAL --><div class=modal><div class=modal-content><div class=modal-form><span>some</span></div><div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div></div></div><!-- bereich für modale fenster -->
+    <!-- DATAL --><div id='datalists'><datalist id='NV'><option value='N.V.'>
+        <datalist id='style'><option value='nn'>keineFunktion</option><option value='i2m'>Modal-Fenster</option><option value='uf'>FilterDimension</option><option value='BC'>BarCode</option></datalist>
+        <datalist id='media'><option value='td-hidden'>ausblenden</option><option value='th-width-3'>S</option><option value='th-width-5'>M</option><option value='th-width-8'>L</option></datalist>
+        </datalist></div><!-- dynamischer datlist bereich -->
+  
+    <header><div><sup>NEW.IT@</sup> <strong>ShopFloor</strong></div><div>Frag' die Cloud (AWS serverless KI on th fly with js)</div><div><span id="info">...</span></div></header>
+    
+    <nav>
+        <span class="X oneofn" data="X-TI" onclick="javascript:MODEL='TITAN';_.U.on('X','TI');" title="Anfrage mit LLM TITAN">TITAN</span>
+         
+        <span class="X oneofn" data="X-NO" onclick="javascript:MODEL='NOVAM';_.U.on('X','NO');" title="Anfrage mit LLM NOVA"">NOVAM</span>
+         
+        <span class="X oneofn" data="X-CL" onclick="javascript:MODEL='CLAUDE';_.U.on('X','CL');" title="Anfrage mit LLM CLAUDE"">CLAUDE</span>
+         
+        <span class="X oneofn" data="X-LL" onclick="javascript:MODEL='LLAMA';_.U.on('X','LL');" title="Anfrage mit LLM LLAMA"">LLAMA</span>
+        |
+    </nav>
+    <section>
+        <main>
+            <div class="modal-form">
+                <header>Frag was...</header>
+                <div class=form-group>
+                    <!--
+                        <label for="searchtext" ></label>
+                        <input class=input-control type=text name=searchtext id="searchtext" placeholder="wer wird millionär" size="60"></input>
+                -->   
+                        <label for="searchtext2" ></label>
+                        <textarea class=input-control type=text name=searchtext2 id="searchtext2" placeholder="wer wird millionär" size="60"></textarea>
+                </div>
+                <div class=form-group> <label></label><button id="button1" onclick="ask('searchtext2')">Los..</button></div>
+
+            </div>
+            <div>
+                <header>SW AGENT</header>
+                <p id="agent">
+                    <div class=form-group ><label>Agent</label><textarea readonly id=kinfo>--- info ----</textarea></div>
+                </p>
+
+            </div>
+
+    </main>
+    </section>
+    <footer>&copy; 2025-08-22 by wolfSflow@TMI<span>idee qsk-app</span><span>impressum | kontakt | feedback</span></footer>
+ </body>
+ <script async type="module" src="app_bedrock.mjs"></script>
+ <script>
+    
+       // URL: http://whatelse?NAME=VALUE
+       // http://localhost:8002/bedrock_ta.html?REGION=eu-central-1&API=aefqdt9no9
+       // Diese Funktion liest den Parameter "NAME" aus der URL
+       let MODEL   = `TITAN`;
+       const url = new URLSearchParams(window.location.search)
+       , REGION  = url.get('REGION')|| 'NV'
+       , API     = url.get('API'   )|| 'NV'
+       
+       , ask     = async (id) => { document.querySelector(':root').style.setProperty('--baseHue', '340'); 
+                                   document.getElementById('kinfo').value=document.getElementById('kinfo').value +`\n\nNeue Anfrage mit ${MODEL}\t`+  document.getElementById(id).value 
+                                   const response = await fetch( `https://${API}.execute-api.${REGION}.amazonaws.com/bedrock` //2023-11-01 die CORS einstellung auf dem Server ist erfolgt , wenn cors gesetzt ist, dann keine base 64
+                                                               , { method  : "POST"
+                                                                 , headers : { "Access-Control-Request-Method"  : "POST"
+                                                                             , "Access-Control-Request-Headers" : "x-amz-model,Content-Type"
+                                                                             , "Content-Type"                   : "application/json"
+                                                                             //, "x-amz-model"                    : MODEL
+                                                                             } 
+                                                                 , body    : `{"model":"${MODEL}","text":"${document.getElementById(id).value ||"best programming language for cloud in 2023"}"}`
+                                                                 })
+                                  , text          = await response.text();
+                                  document.querySelector(':root').style.setProperty('--baseHue', '210'); 
+                                  document.getElementById('kinfo').value=document.getElementById('kinfo').value + `\n\nAntwort\n` + text+`\n----------\n`;
+                                }
+    </script>
+</html>
