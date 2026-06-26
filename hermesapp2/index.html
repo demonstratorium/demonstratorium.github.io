@@ -11,6 +11,8 @@
     <meta property="og:type" content="website" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏭</text></svg>">
     <title>ShopFloor Dashboard</title>
     <link rel="stylesheet" href="main.css">
@@ -216,6 +218,7 @@
       const main = document.querySelector('main');
 
       // setModal: opens modal with form
+      let fbtnsave;
       const setModal = (t, s, l) => {
         const f = JSON.parse(l);
         modalform.innerHTML = `<header>${t}<span class="info">${s}</span><span class="close" id="modal-close">&times;</span></header><form id="form">`
@@ -229,7 +232,7 @@
 
         // Save button via addEventListener (NOT inline onclick)
         if (typeof fbtnsave === 'function') btnsave.removeEventListener('click', fbtnsave);
-        let fbtnsave = async (event) => {
+        fbtnsave = async (event) => {
           const fd = new FormData(document.getElementById('form'));
           const fj = Object.fromEntries([...fd.entries()]);
           fj['PID'] = t;
