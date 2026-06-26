@@ -14,8 +14,8 @@ import { _ } from './lib.mjs';
 
   // Load config and icons in parallel
   await Promise.all([
-    'cfg.json',
-    'icons.json'
+    'cfg_k1.json',
+    'L_IC.json'
   ].map(async (e) => {
     const key = e.split('.')[0];
     const d = await _.D.gD(e);
@@ -24,8 +24,8 @@ import { _ } from './lib.mjs';
 
   // Set SVG icons
   const ic = document.querySelector('#icons');
-  if (ic && _.DATA['icons']) {
-    ic.innerHTML = _.DATA['icons'];
+  if (ic && _.DATA['L_IC']) {
+    _.I.aI(_.DATA['L_IC'], ic);
   }
 
   // Initialize tables
@@ -33,7 +33,7 @@ import { _ } from './lib.mjs';
     .forEach((e) => {
       _.GT.push(e);
       _.GX[e] = {};
-      _.D.sT(e, _.DATA['cfg'] ? _.DATA['cfg'] : {});
+      _.D.sT(e, _.DATA['cfg_k1'] ? _.DATA['cfg_k1']['cfg'] || {} : {});
       _.T.rf(e);
     });
 
