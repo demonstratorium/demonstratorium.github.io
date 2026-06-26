@@ -228,8 +228,8 @@
         });
 
         // Save button via addEventListener (NOT inline onclick)
-        btnsave.removeEventListener('click', fbtnsave);
-        fbtnsave = async (event) => {
+        if (typeof fbtnsave === 'function') btnsave.removeEventListener('click', fbtnsave);
+        let fbtnsave = async (event) => {
           const fd = new FormData(document.getElementById('form'));
           const fj = Object.fromEntries([...fd.entries()]);
           fj['PID'] = t;
