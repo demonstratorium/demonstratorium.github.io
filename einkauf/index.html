@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Einkaufsliste & Rezepte — Multi-Form App">
+  <meta name="keywords" content="einkauf, rezepte, multi-form, demo">
+  <meta name="author" content="Steffen Wolf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="stylesheet" href="main.css">
+  <title>Einkaufsapp</title>
+  <style>
+    #saved-list { margin-top:1rem; width:100%; }
+    .saved-item {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:.5rem .8rem; margin:.2rem 0;
+      background:hsl(var(--baseHue),100%,13%);
+      border-radius:.3rem;
+    }
+    .saved-item .close { font-size:1.2rem; opacity:.5; cursor:pointer; }
+    .saved-item .close:hover { opacity:1; }
+    main>div.box {
+      display:flex; flex-direction:column;
+      border:1px solid hsl(var(--baseHue),55%,55%,.3);
+      width:clamp(14rem,18vw,20rem); height:7rem;
+      border-radius:.3rem; cursor:pointer;
+      transition:border-color .2s;
+    }
+    main>div.box:hover {
+      border-color:hsl(var(--baseHue),55%,55%);
+    }
+    .box header { padding:.5rem; font-weight:bold; }
+    .box .small { padding:0 .5rem .5rem; }
+    footer .badge { opacity:.5; }
+  </style>
+</head>
+<body>
+  <!-- ICONS -->
+  <svg def id=icons style="display:none"></svg>
+
+  <!-- MODAL -->
+  <div class=modal>
+    <div class=modal-content>
+      <div class=modal-form><span>some</span></div>
+      <div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div>
+    </div>
+  </div>
+
+  <!-- DATALISTS -->
+  <div id='datalists' style="display:none">
+    <datalist id='kat_einkauf'>
+      <option value='Lebensmittel'>
+      <option value='Getränke'>
+      <option value='Haushalt'>
+      <option value='Pflege'>
+      <option value='Sonstiges'>
+    </datalist>
+    <datalist id='kat_rezept'>
+      <option value='Vorspeise'>
+      <option value='Hauptgericht'>
+      <option value='Dessert'>
+      <option value='Snack'>
+      <option value='Getränk'>
+    </datalist>
+  </div>
+
+  <header>
+    <div><sup>🍴</sup> <strong>Einkaufsapp</strong></div>
+    <div>Einkaufsliste &amp; Rezepte</div>
+    <div><span id="info">...</span></div>
+  </header>
+
+  <section>
+    <main>
+      <!-- Form-Tiles werden von app_einkauf.mjs gerendert -->
+    </main>
+    <div style="padding:.5rem 1rem">
+      <span onclick="document.querySelector('#saved-list').style.display=document.querySelector('#saved-list').style.display==='none'?'block':'none'"
+            style="cursor:pointer;opacity:.7;font-size:.9rem">📋 Gespeicherte Einträge anzeigen</span>
+    </div>
+    <div id="saved-list" style="padding:0 1rem 2rem;display:block"></div>
+  </section>
+
+  <footer>
+    &copy; 2026 by hermes@wolfsflow
+    <span class="badge">einkaufsapp · demo · 0 dependencies</span>
+  </footer>
+</body>
+<script async type="module" src="app_einkauf.mjs"></script>
+</html>
