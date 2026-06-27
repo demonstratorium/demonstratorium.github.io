@@ -1,25 +1,99 @@
-{ "info"    : "Rezepte"
-, "comment" : "20 Rezepte mit Kategorien und Zubereitungszeit"
-, "views"   : { "show" : { "p0" : { "col" : "_id"           , "head" : "ID"           , "style" : ""    , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"ID" }
-                         , "p1" : { "col" : "Rezeptname"    , "head" : "Rezept"       , "style" : ""    , "align" : "left"  , "media" : "th-width-13", "sort": true  , "colbez":"Rezeptname" }
-                         , "p2" : { "col" : "Anzahl"        , "head" : "Portionen"    , "style" : ""    , "align" : "right" , "media" : "th-width-5" , "sort": true  , "colbez":"Anzahl" }
-                         , "p3" : { "col" : "Zeit"          , "head" : "Zeit (Min)"   , "style" : ""    , "align" : "right" , "media" : "th-width-5" , "sort": true  , "colbez":"Minuten" }
-                         , "p4" : { "col" : "Kategorie"     , "head" : "Kategorie"    , "style" : ""    , "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Kategorie" }
-                         , "p5" : { "col" : "Schwierigkeit" , "head" : "Level"        , "style" : ""    , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Schwierigkeit" }
-                         }
-              }
-, "cfg"    : { "subheader"    : "20 Rezepte zum Nachkochen"
-              , "header"      : "🍳 Rezepte"
-              , "tableDir"    : ""
-              , "tableName"   : "k2"
-              , "pageSize"    : 10
-              , "startstop"   : false
-              , "maxPage"     : 0
-              , "page"        : 0
-              , "sort"        : ["dos","_id",false]
-              , "searchfields": ["Rezeptname","Kategorie","Schwierigkeit"]
-              , "structure"   : ["_id","Rezeptname","Anzahl","Zeit","Kategorie","Schwierigkeit"]
-              , "summary"     : ["Kategorie","Anzahl"]
-              , "stats"       : ["Zeit"]
-              }
+{
+  "info": "Rezepte",
+  "comment": "20 Rezepte mit Kategorien und Zubereitungszeit",
+  "views": {
+    "show": {
+      "p0": {
+        "col": "_id",
+        "head": "ID",
+        "style": "",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "ID"
+      },
+      "p1": {
+        "col": "Rezeptname",
+        "head": "Rezept",
+        "style": "",
+        "align": "left",
+        "media": "th-width-13",
+        "sort": true,
+        "colbez": "Rezeptname"
+      },
+      "p2": {
+        "col": "Anzahl",
+        "head": "Portionen",
+        "style": "",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Anzahl"
+      },
+      "p3": {
+        "col": "Zeit",
+        "head": "Zeit (Min)",
+        "style": "",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Minuten"
+      },
+      "p4": {
+        "col": "Kategorie",
+        "head": "Kategorie",
+        "style": "",
+        "align": "left",
+        "media": "th-width-8",
+        "sort": true,
+        "colbez": "Kategorie"
+      },
+      "p5": {
+        "col": "Schwierigkeit",
+        "head": "Level",
+        "style": "",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Schwierigkeit"
+      }
+    }
+  },
+  "cfg": {
+    "subheader": "20 Rezepte zum Nachkochen",
+    "header": "\ud83c\udf73 Rezepte",
+    "tableDir": "",
+    "tableName": "k2",
+    "pageSize": 10,
+    "startstop": false,
+    "maxPage": 0,
+    "page": 0,
+    "sort": [
+      "dos",
+      "_id",
+      false
+    ],
+    "searchfields": [
+      "Rezeptname",
+      "Kategorie",
+      "Schwierigkeit"
+    ],
+    "structure": [
+      "_id",
+      "Rezeptname",
+      "Anzahl",
+      "Zeit",
+      "Kategorie",
+      "Schwierigkeit"
+    ],
+    "summary": [
+      "Kategorie",
+      "Anzahl"
+    ],
+    "stats": [
+      "Zeit"
+    ],
+    "jfilter": {},
+    "sfilter": {}
+  }
 }
