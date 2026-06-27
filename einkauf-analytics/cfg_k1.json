@@ -1,0 +1,25 @@
+{ "info"    : "Einkaufsliste"
+, "comment" : "20 Einkaufsartikel mit Kategorien"
+, "views"   : { "show" : { "p0" : { "col" : "_id"       , "head" : "ID"         , "style" : ""    , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"ID" }
+                         , "p1" : { "col" : "Produkt"    , "head" : "Produkt"    , "style" : ""    , "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Produktname" }
+                         , "p2" : { "col" : "Menge"      , "head" : "Menge"      , "style" : ""    , "align" : "right" , "media" : "th-width-5" , "sort": true  , "colbez":"Menge" }
+                         , "p3" : { "col" : "Einheit"    , "head" : "Einheit"    , "style" : ""    , "align" : "left"  , "media" : "th-width-5" , "sort": true  , "colbez":"Einheit" }
+                         , "p4" : { "col" : "Kategorie"  , "head" : "Kategorie"  , "style" : ""    , "align" : "left"  , "media" : "th-width-8" , "sort": true  , "colbez":"Kategorie" }
+                         , "p5" : { "col" : "Preis"      , "head" : "Preis €"    , "style" : ""    , "align" : "right" , "media" : "th-width-5" , "sort": true  , "colbez":"Preis" }
+                         }
+              }
+, "cfg"    : { "subheader"    : "Einkaufsliste mit Preisen und Kategorien"
+              , "header"      : "📋 Einkaufsliste"
+              , "tableDir"    : ""
+              , "tableName"   : "k1"
+              , "pageSize"    : 10
+              , "startstop"   : false
+              , "maxPage"     : 0
+              , "page"        : 0
+              , "sort"        : ["dos","_id",false]
+              , "searchfields": ["Produkt","Kategorie"]
+              , "structure"   : ["_id","Produkt","Menge","Einheit","Kategorie","Preis"]
+              , "summary"     : ["Menge","Kategorie"]
+              , "stats"       : ["Preis"]
+              }
+}
