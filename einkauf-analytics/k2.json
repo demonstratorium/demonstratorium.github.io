@@ -1,0 +1,22 @@
+[
+  {"_id":"RZ01","Rezeptname":"Spaghetti Bolognese","Anzahl":4,"Zeit":45,"Kategorie":"Hauptgericht","Schwierigkeit":"Mittel"},
+  {"_id":"RZ02","Rezeptname":"Tomatensuppe","Anzahl":2,"Zeit":30,"Kategorie":"Vorspeise","Schwierigkeit":"Einfach"},
+  {"_id":"RZ03","Rezeptname":"Rührei","Anzahl":1,"Zeit":10,"Kategorie":"Hauptgericht","Schwierigkeit":"Einfach"},
+  {"_id":"RZ04","Rezeptname":"Käsekuchen","Anzahl":8,"Zeit":90,"Kategorie":"Dessert","Schwierigkeit":"Mittel"},
+  {"_id":"RZ05","Rezeptname":"Griechischer Salat","Anzahl":2,"Zeit":15,"Kategorie":"Snack","Schwierigkeit":"Einfach"},
+  {"_id":"RZ06","Rezeptname":"Pfannkuchen","Anzahl":4,"Zeit":25,"Kategorie":"Hauptgericht","Schwierigkeit":"Einfach"},
+  {"_id":"RZ07","Rezeptname":"Hühnersuppe","Anzahl":6,"Zeit":60,"Kategorie":"Vorspeise","Schwierigkeit":"Mittel"},
+  {"_id":"RZ08","Rezeptname":"Bananenmilchshake","Anzahl":2,"Zeit":5,"Kategorie":"Getränk","Schwierigkeit":"Einfach"},
+  {"_id":"RZ09","Rezeptname":"Lasagne","Anzahl":6,"Zeit":75,"Kategorie":"Hauptgericht","Schwierigkeit":"Aufwendig"},
+  {"_id":"RZ10","Rezeptname":"Bratkartoffeln","Anzahl":2,"Zeit":30,"Kategorie":"Snack","Schwierigkeit":"Einfach"},
+  {"_id":"RZ11","Rezeptname":"Schokoladenpudding","Anzahl":4,"Zeit":20,"Kategorie":"Dessert","Schwierigkeit":"Einfach"},
+  {"_id":"RZ12","Rezeptname":"Wiener Schnitzel","Anzahl":2,"Zeit":40,"Kategorie":"Hauptgericht","Schwierigkeit":"Mittel"},
+  {"_id":"RZ13","Rezeptname":"Obstsalat","Anzahl":4,"Zeit":15,"Kategorie":"Dessert","Schwierigkeit":"Einfach"},
+  {"_id":"RZ14","Rezeptname":"Kürbissuppe","Anzahl":4,"Zeit":45,"Kategorie":"Vorspeise","Schwierigkeit":"Mittel"},
+  {"_id":"RZ15","Rezeptname":"Quiche Lorraine","Anzahl":6,"Zeit":55,"Kategorie":"Hauptgericht","Schwierigkeit":"Aufwendig"},
+  {"_id":"RZ16","Rezeptname":"Erdbeerlimonade","Anzahl":2,"Zeit":10,"Kategorie":"Getränk","Schwierigkeit":"Einfach"},
+  {"_id":"RZ17","Rezeptname":"Fischstäbchen","Anzahl":2,"Zeit":20,"Kategorie":"Hauptgericht","Schwierigkeit":"Einfach"},
+  {"_id":"RZ18","Rezeptname":"Mousse au Chocolat","Anzahl":4,"Zeit":30,"Kategorie":"Dessert","Schwierigkeit":"Mittel"},
+  {"_id":"RZ19","Rezeptname":"Gemüsepfanne","Anzahl":2,"Zeit":25,"Kategorie":"Hauptgericht","Schwierigkeit":"Einfach"},
+  {"_id":"RZ20","Rezeptname":"Zwiebelkuchen","Anzahl":8,"Zeit":80,"Kategorie":"Snack","Schwierigkeit":"Mittel"}
+]
