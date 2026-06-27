@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Einkaufs-Analytics: Tabellen, Filter, Sortierung">
+  <meta name="keywords" content="einkauf, rezepte, analytics, tabelle, filter, demo">
+  <meta name="author" content="Steffen Wolf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>einkauf@analytics</title>
+</head>
+<body>
+  <!-- ICONS -->
+  <svg def id=icons style="display:none"></svg>
+
+  <!-- MODAL -->
+  <div class=modal><div class=modal-content><div class=modal-form><span>some</span></div><div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div></div></div>
+
+  <!-- DATALISTS -->
+  <div id='datalists' style="display:none">
+    <datalist id='NV'><option value='N.V.'>
+    <datalist id='style'><option value='nn'>keineFunktion</option><option value='i2m'>Modal</option><option value='uf'>Filter</option></datalist>
+    <datalist id='media'><option value='td-hidden'>ausblenden</option><option value='th-width-3'>S</option><option value='th-width-5'>M</option><option value='th-width-8'>L</option></datalist>
+  </div>
+
+  <header>
+    <div><sup>📊</sup> <strong>Einkauf Analytics</strong></div>
+    <div>Einkaufsliste &amp; Rezepte · Tabellen + Filter</div>
+    <div><span id="info">...</span></div>
+  </header>
+
+  <nav>
+    <input onclick="_.U.tt('k1')" type="checkbox" id="lbk1" dtp="" checked>
+    <label class="mofn widthx" for="lbk1" title="Einkaufsliste">🛒 Einkaufsliste</label>
+
+    <input onclick="_.U.tt('k2')" type="checkbox" id="lbk2" dtp="" checked>
+    <label class="mofn widthx" for="lbk2" title="Rezepte">🍳 Rezepte</label>
+  </nav>
+
+  <section>
+    <main></main>
+  </section>
+
+  <footer>
+    &copy; 2026 by hermes@wolfsflow
+    <span>einkauf-analytics · demo · 40 records</span>
+  </footer>
+</body>
+<script async type="module" src="app_einkauf_ana.mjs"></script>
+</html>
