@@ -1,0 +1,26 @@
+{
+  "einkaufsliste": {
+    "title": "Einkaufsliste",
+    "subtitle": "Produkt erfassen",
+    "icon": "vw-task",
+    "info": "Was muss eingekauft werden?",
+    "form": [
+      { "l": "Produkt",  "v": "Produktname",  "n": "produkt" },
+      { "l": "Menge",    "v": 1,               "n": "menge",   "t": "number" },
+      { "l": "Einheit",  "v": "Stück",         "n": "einheit" },
+      { "l": "Kategorie","v": "Lebensmittel",  "n": "kategorie", "d": "kat_einkauf" }
+    ]
+  },
+  "rezepte": {
+    "title": "Rezepte",
+    "subtitle": "Neues Rezept anlegen",
+    "icon": "vw-gridview",
+    "info": "Was wollen wir kochen?",
+    "form": [
+      { "l": "Rezeptname",    "v": "Name",          "n": "name" },
+      { "l": "Anzahl Produkte","v": 1,              "n": "anzahl", "t": "number" },
+      { "l": "Zeit (Min)",    "v": 30,              "n": "zeit",   "t": "number" },
+      { "l": "Kategorie",     "v": "Hauptgericht",   "n": "kategorie", "d": "kat_rezept" }
+    ]
+  }
+}
