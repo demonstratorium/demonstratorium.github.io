@@ -91,7 +91,7 @@ import { _ } from './lib.min.mjs';
       const detail = entry.menge ? `${entry.menge} ${entry.einheit || ''}` :
                      entry.zeit ? `${entry.zeit} Min` : '';
       return `<div class="saved-item" data-idx="${data.length - 1 - i}">
-        <span><svg class="icon"><use href="#${typ === 'Einkaufsliste' ? 'vw-task' : 'vw-gridview'}" /></svg>
+        <span><svg class="icon"><use href="#${typ === 'Einkaufsliste' ? 'hw-task' : 'hw-gridview'}" /></svg>
         <strong>${label}</strong> ${detail ? `<span class="small">— ${detail}</span>` : ''}
         <span class="small">${entry.kategorie || ''}</span></span>
         <span class="close" onclick="if(confirm('Löschen?')){(function(){
