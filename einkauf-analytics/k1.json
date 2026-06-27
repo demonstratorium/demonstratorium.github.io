@@ -1,0 +1,22 @@
+[
+  {"_id":"EL01","Produkt":"Milch","Menge":2,"Einheit":"l","Kategorie":"Lebensmittel","Preis":1.49},
+  {"_id":"EL02","Produkt":"Brot","Menge":1,"Einheit":"Stk","Kategorie":"Lebensmittel","Preis":3.99},
+  {"_id":"EL03","Produkt":"Eier","Menge":10,"Einheit":"Stk","Kategorie":"Lebensmittel","Preis":2.79},
+  {"_id":"EL04","Produkt":"Apfelsaft","Menge":1,"Einheit":"l","Kategorie":"Getränke","Preis":1.89},
+  {"_id":"EL05","Produkt":"Käse","Menge":200,"Einheit":"g","Kategorie":"Lebensmittel","Preis":4.49},
+  {"_id":"EL06","Produkt":"Mineralwasser","Menge":6,"Einheit":"Flasche","Kategorie":"Getränke","Preis":3.29},
+  {"_id":"EL07","Produkt":"Reis","Menge":1,"Einheit":"kg","Kategorie":"Lebensmittel","Preis":2.49},
+  {"_id":"EL08","Produkt":"Zahnpasta","Menge":1,"Einheit":"Stk","Kategorie":"Pflege","Preis":2.99},
+  {"_id":"EL09","Produkt":"Butter","Menge":250,"Einheit":"g","Kategorie":"Lebensmittel","Preis":2.19},
+  {"_id":"EL10","Produkt":"Waschmittel","Menge":1,"Einheit":"l","Kategorie":"Haushalt","Preis":5.99},
+  {"_id":"EL11","Produkt":"Tomaten","Menge":500,"Einheit":"g","Kategorie":"Lebensmittel","Preis":1.29},
+  {"_id":"EL12","Produkt":"Joghurt","Menge":4,"Einheit":"Stk","Kategorie":"Lebensmittel","Preis":1.99},
+  {"_id":"EL13","Produkt":"Cola","Menge":2,"Einheit":"l","Kategorie":"Getränke","Preis":1.69},
+  {"_id":"EL14","Produkt":"Handseife","Menge":1,"Einheit":"Stk","Kategorie":"Pflege","Preis":1.49},
+  {"_id":"EL15","Produkt":"Kaffee","Menge":500,"Einheit":"g","Kategorie":"Lebensmittel","Preis":7.99},
+  {"_id":"EL16","Produkt":"Putztuch","Menge":3,"Einheit":"Rolle","Kategorie":"Haushalt","Preis":2.49},
+  {"_id":"EL17","Produkt":"Honig","Menge":250,"Einheit":"g","Kategorie":"Lebensmittel","Preis":4.99},
+  {"_id":"EL18","Produkt":"Tee","Menge":20,"Einheit":"Beutel","Kategorie":"Getränke","Preis":1.79},
+  {"_id":"EL19","Produkt":"Nudeln","Menge":500,"Einheit":"g","Kategorie":"Lebensmittel","Preis":1.19},
+  {"_id":"EL20","Produkt":"Öl","Menge":1,"Einheit":"l","Kategorie":"Lebensmittel","Preis":3.49}
+]
