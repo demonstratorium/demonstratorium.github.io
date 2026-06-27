@@ -65,6 +65,7 @@
     "tableDir": "",
     "tableName": "k1",
     "pageSize": 10,
+    "view": "show",
     "startstop": false,
     "maxPage": 0,
     "page": 0,
