@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name= "description" content= "RDF OWL JSON-LD einfach">
+    <meta name= "keywords"    content= "AWS, serverless, moduleless, analytics, multiTable, RDF, OWL">
+    <meta name= "author"      content= "Steffen Wolf">
+    <meta name= "viewport"    content= "width=device-width, initial-scale=1.0">
+	<meta property="og:title" 		content="The Way to RDF by JSON X.lib " />
+    <meta property="og:description" content="Chemnitzer Irgendwas" />
+	<meta property="og:video" 		content="qsk.webm" />
+	<meta property="og:type"  		content="website" />
+	<meta property="og:image" 		content="logo_idsearch.png" />
+	<link rel="icon" type="image/png" href="logo_idsearch.png">
+    <link rel="stylesheet" href="mainmin.css">
+    <title>1.10rdf@amplify</title>
+    </head>    
+<body>
+    <!-- ICONS --><svg def id=icons></svg><!-- display:none soll nicht sichtbar sein hier sind die verwendeten ICONS aus der GroupUI -->
+    <!-- MODAL --><div class=modal><div class=modal-content><div class=modal-form><span>some</span></div><div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div></div></div><!-- bereich für modale fenster -->
+    <!-- DATAL --><div id='datalists'><datalist id='NV'><option value='N.V.'>
+        <datalist id='style'><option value='nn'>keineFunktion</option><option value='i2m'>Modal-Fenster</option><option value='uf'>FilterDimension</option><option value='BC'>BarCode</option></datalist>
+        <datalist id='media'><option value='td-hidden'>ausblenden</option><option value='th-width-3'>S</option><option value='th-width-5'>M</option><option value='th-width-8'>L</option></datalist>
+        </datalist></div><!-- dynamischer datlist bereich -->
+    <header><div><sup>NEW.IT@</sup> <strong>ShopFloor</strong></div><div><svg class=icon><use xlink:href="#vw-factory" /></svg>RDF-Hierarchie onAmplify (dev 09)</div><div><span >...</span></div></header>
+    <nav><span id="types" ><span></span></span><span id="attributes" ><span></span></span><span id="keyvalues" ><span>kv</span></span>  </nav>
+      <section>
+        <aside>
+            <a href="javascript:_.H.DE(document.querySelector('#aside'),document.querySelector('#VR0'));_.H.DE(document.querySelector('#aside'),document.querySelector('#VR1'));_.H.DE(document.querySelector('#aside'),document.querySelector('#VR2'))"><svg class=icon><use xlink:href="#vw-delete" /></svg></a>
+            <a href="javascript:_.X.OK(_.H['MH']( _.H['JH'](_.DATA['rdf']) )).forEach((e,i)=>_.H['AE'](document.querySelector('#aside'),e,'VR'+i,_.DATA['rdf']))"><svg class=icon><use xlink:href="#vw-gridview" /></svg></a>
+            <div id=aside>
+            </div>
+            <!--
+            <div>
+                <span data-counter=3>irgendwas</span>
+                <span>nichts</span>
+                <span data-counter=4>anders</span>
+            </div>
+            -->
+        </aside>
+        <main id=main>            <div class="modal-form">
+            <header>JSON-LD RDF Ontologie</header>
+         
+            <div class=form-group ><label>RDF</label><textarea id="rdfinput">---RDF-Attribute----</textarea></div>
+            <div class=form-group> <label></label><button id="button1" onclick="test()">Analysieren</button></div>
+            </div>
+            <div class="modal-form">
+                <header>Info</header>
+             
+                <div class=form-group ><label>RDF</label><textarea id="rdfinfo">...</textarea></div>
+            
+                </div>
+        </main>
+        
+       </section>
+    <footer>&copy; 2025-08-05 by wolfSflow@TMI<span id="info">irgendwas - steffens framework - with amplify</span><span>impressum | kontakt | feedback</span></footer>
+ </body>
+   <script async type="module" src="app_hierarchie.mjs"></script>
+   <script>
+    //_.X.describe(_.X.OV(_.DATA.rdf),{s:["pointType","energyType","meteringType","raster","measurementUnit","displayedUnit"]} )
+    // _.X.describe(_.X.OV(_.DATA.rdf),{s:[...new Set(_.X['OE'](_.DATA.rdf).reduce((t,e)=>{t=t.concat(_.X['OK'](e[1]));return t;},[]))]})  
+        
+    const AS = document.querySelector('#aside')
+    
+    , NAV =document.querySelector('nav')
+
+
+    test = async () => { document.querySelector(':root').style.setProperty('--baseHue', '340'); 
+                         // aus JSON lesen _.DATA.rdf=_.R.J2R(PROJ,{id:"SID"}) bspw Projekte //(1)
+                        // Text to RDF Transform aus copy_paste
+                         _.DATA['rdf']=_.R['B'](document.getElementById('rdfinput').value.split('\n'),['A','C']);// RDF Builder mit "C" und "A" incl @HC und from
+                         document.querySelector('#info').textContent=`${_['X']['OK'](_['DATA']['rdf']).length} Elemente analysiert` ;
+                        // --------------------------------------
+
+                         // Key-Value Histogramm bilden { company:{one:2,two:1},eier:{2:1,one:1},bizeps:{schach:1}}
+                         _.DATA['rkv']=_.R['RKV'](_.DATA['rdf']);   //(2)
+                         delete _.DATA['rkv']['from'];
+                         delete _.DATA['rkv']['@HC'];
+                        // -------------------------------------------
+
+                        //element aus Gefüge entfernen
+                        _.H['DE'](document.querySelector('#keyvalues'),document.querySelector('#keyvalues span'));
+                    
+                        // neues Gefüge aufbauen
+                        const msp = document.createElement('span'); //(3)
+                        //                               e[0] key e[1] JSON of Keys=Values and Counts
+                        _.X['OE'](_.DATA['rkv']).forEach(e=>_.X['OK'](e[1]).forEach(E=>msp.appendChild(_.R.b4RKV(_.DATA['rdf'],e[0],E,'rdfinfo','value','KeV'))));
+
+                        document.querySelector('#keyvalues').appendChild(msp);
+
+                         // neues Gefüge aufbauen
+                         const msa = document.createElement('span'); //(3)
+                        //                               e[0] key e[1] JSON of Keys=Values and Counts
+                        //  ,b4RKV : (r,k,v,i='info',c='textContent',f='KeV')                                                       // aus lib
+                        //msp.addEventListener('click',()=>{ document.querySelector(`#${i}`)[c]= _.X['JS'](_.R['FX'][f](r,k,v));}); // aus lib
+                        msa.appendChild(_.R.b4RKV(_.DATA['rdf'],1,'p','rdfinfo','value','iI'));// value(weil hier ist es ein Input Element) oder Textcontent
+
+                        document.querySelector('#keyvalues').appendChild(msa);
+
+
+                        //   verschiedene Filter anwenden _.R['FX']['FV'](_.DATA.rdf,','egal','Wolf')
+                        // Zusammenbringen von DatenBasen Object.assign(_.DATA.rdfc, _.DATA.rdfp,_.DATA.rdf)
+                        // kombinierte Filter _.R['FX']['FKV'](_.R['FX']['FK'](_.DATA.rdf,'GeoID',''),'from','Konzern') 
+                        // [{f:'FKV',k:'from',v:'Konzern'},{f:'FK',k:'GeoID',v:''}].reduce((t,e)=>_.R['FX'][e.f](t,e.k,e.v),_.DATA.rdf)
+                        // regexp suche _.R['FX']['RV'](_.DATA.rdf,'Type','\\d\\d71') 
+                        // _.R['mf'](_.DATA.rdf,[{f:'KV',k:'BS',v:'Windows'},{f:'RV',k:'',v:'\\d{3}\\D77'}]) 3 ziffern, dann keine ziffer, dann 77
+                        // Concatinate Filter vorher über Object.assign(a1,a2) zusammenlegen
+
+                               document.querySelector(':root').style.setProperty('--baseHue', '210'); 
+                             }
+    ;
+    
+    /*
+-------------------
+konzern hat type oe
+werkc hat type oe
+werkd hat type oe
+werkz hat type oe
+-----------------------
+konzern contains werkc
+konzern contains werkz
+konzern contains werkd
+werkc contains h100
+werkc contains h200
+werkc contains h300
+werkc contains cc
+cc contains it
+it contains itp
+it contains its
+it contains carsten
+itp contains steffen
+its contains kayron
+-----------------------
+carsten hat type person
+steffen hat type person
+kayron hat type person
+nbc hat type ppc
+nbs hat type ppc
+nbk hat type ppc
+carsten contains nbc
+steffen contains nbs
+kayron contains nbk
+
+
+    */
+   </script>
+</html>
