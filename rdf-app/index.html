@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RDF-Hierarchie: Textbasierte Tripel eingeben & navigieren">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>rdf@hierarchie</title>
+  <style>
+    .rdf-layout { display:flex; gap:1rem; padding:1rem; flex-grow:1; }
+    .rdf-input-panel { flex:0 0 40%; min-width:20rem; display:flex; flex-direction:column; }
+    .rdf-input-panel textarea {
+      flex:1; min-height:20rem;
+      background:hsl(var(--baseHue),100%,10%);
+      color:hsl(var(--baseHue),100%,90%);
+      border:1px solid hsl(var(--baseHue),55%,55%,.3);
+      border-radius:.3rem; padding:.5rem;
+      font-family:'Fira Mono',monospace; font-size:.8rem;
+      resize:vertical;
+    }
+    .rdf-nav-panel {
+      flex:0 0 20%; min-width:12rem;
+      background:hsl(var(--baseHue),100%,12%);
+      border-radius:.3rem; padding:.5rem;
+      overflow-y:auto; max-height:70vh;
+    }
+    .rdf-detail-panel {
+      flex:1;
+      background:hsl(var(--baseHue),100%,12%);
+      border-radius:.3rem; padding:1rem;
+      overflow-y:auto; max-height:70vh;
+    }
+    .rdf-nav-panel div { padding:.15rem 0; }
+    .rdf-nav-panel span {
+      cursor:pointer; display:inline-block; padding:.1rem .4rem;
+      border-radius:.2rem; font-size:.85rem;
+      transition:background .15s;
+    }
+    .rdf-nav-panel span:hover {
+      background:hsl(var(--baseHue),55%,30%);
+    }
+    .attr-table { width:100%; border-collapse:collapse; margin-top:.5rem; }
+    .attr-table th { text-align:left; padding:.3rem .6rem; font-size:.75rem; opacity:.6; border-bottom:1px solid hsl(var(--baseHue),55%,30%,.3); }
+    .attr-table td { padding:.3rem .6rem; font-size:.85rem; border-bottom:1px solid hsl(var(--baseHue),55%,20%,.2); }
+    .attr-table tr:hover td { background:hsl(var(--baseHue),55%,20%,.3); }
+    .detail-header { font-size:1.1rem; font-weight:bold; margin-bottom:.5rem; }
+    .btn-row { display:flex; gap:.5rem; margin-top:.5rem; }
+    .btn-row button {
+      padding:.4rem 1rem; border:1px solid hsl(var(--baseHue),55%,55%,.4);
+      background:hsl(var(--baseHue),55%,20%); color:hsl(var(--baseHue),100%,90%);
+      border-radius:.3rem; cursor:pointer; font-size:.85rem;
+    }
+    .btn-row button:hover { background:hsl(var(--baseHue),55%,30%); }
+    code { font-family:'Fira Mono',monospace; font-size:.8rem; }
+    .badge { display:inline-block; padding:.15rem .5rem; border-radius:.3rem; font-size:.7rem; background:hsl(var(--baseHue),55%,20%); margin:.1rem; }
+    @media (max-width:768px) {
+      .rdf-layout { flex-direction:column; }
+      .rdf-input-panel { flex:auto; min-width:auto; }
+      .rdf-nav-panel { flex:auto; max-height:30vh; }
+      .rdf-detail-panel { flex:auto; max-height:30vh; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ICONS -->
+  <svg def id=icons style="display:none"></svg>
+  <!-- MODAL -->
+  <div class=modal><div class=modal-content><div class=modal-form><span>some</span></div><div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div></div></div>
+
+  <header>
+    <div><sup>🔗</sup> <strong>RDF Hierarchie</strong></div>
+    <div>Text-Tripel → Graph → Navigation</div>
+    <div><span id="info">...</span></div>
+  </header>
+
+  <section class="rdf-layout">
+    <!-- Eingabe -->
+    <div class="rdf-input-panel">
+      <div class="small" style="padding-bottom:.3rem">RDF-Tripel eingeben (<code>X contains Y</code> / <code>X hat attr wert</code>):</div>
+      <textarea id="rdf-input" placeholder="empolis hat Type enterprise&#10;empolis hat sitz kaiserslautern&#10;Personals contains klueter&#10;steinacker hat firstname achim&#10;steinacker hat position director-delivery-operations&#10;..."></textarea>
+      <div class="btn-row">
+        <button id="parse-btn">🔍 Parsen &amp; Anzeigen</button>
+        <button id="example-btn">📄 Beispiel laden</button>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <div class="rdf-nav-panel" id="hierarchy">
+      <div class="small" style="padding-bottom:.5rem">🏛️ Hierarchie</div>
+      <div>—</div>
+    </div>
+    <!-- Details -->
+    <div class="rdf-detail-panel" id="detail">
+      <div class="small" style="padding-bottom:.5rem">📋 Entity-Details</div>
+      <p class="small">Klicke auf einen Knoten in der Hierarchie</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 by hermes@wolfsflow
+    <span class="badge">rdf-hierarchie</span>
+    <span class="badge">_.R.B</span>
+    <span class="badge">_.H.JH</span>
+    <span class="badge">_.H.MH</span>
+  </footer>
+</body>
+<script async type="module" src="app_rdf.mjs"></script>
+</html>
