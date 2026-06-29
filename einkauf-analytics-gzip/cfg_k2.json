@@ -24,7 +24,7 @@
       "p2": {
         "col": "Lieferant",
         "head": "Lieferant",
-        "style": "f",
+        "style": "uf",
         "align": "left",
         "media": "th-width-12",
         "sort": true,
@@ -42,7 +42,7 @@
       "p4": {
         "col": "Menge",
         "head": "Menge",
-        "style": "n",
+        "style": "sf",
         "align": "right",
         "media": "th-width-5",
         "sort": true,
@@ -60,7 +60,7 @@
       "p6": {
         "col": "Status",
         "head": "Status",
-        "style": "f",
+        "style": "uf",
         "align": "left",
         "media": "th-width-8",
         "sort": true,
@@ -69,7 +69,7 @@
       "p7": {
         "col": "Betrag",
         "head": "Betrag €",
-        "style": "n",
+        "style": "sf",
         "align": "right",
         "media": "th-width-5",
         "sort": true,

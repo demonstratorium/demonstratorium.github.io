@@ -24,7 +24,7 @@
       "p2": {
         "col": "Menge",
         "head": "Menge",
-        "style": "n",
+        "style": "sf",
         "align": "right",
         "media": "th-width-5",
         "sort": true,
@@ -33,7 +33,7 @@
       "p3": {
         "col": "Einheit",
         "head": "Einheit",
-        "style": "f",
+        "style": "uf",
         "align": "left",
         "media": "th-width-5",
         "sort": true,
@@ -42,7 +42,7 @@
       "p4": {
         "col": "Kategorie",
         "head": "Kategorie",
-        "style": "f",
+        "style": "uf",
         "align": "left",
         "media": "th-width-8",
         "sort": true,
@@ -51,7 +51,7 @@
       "p5": {
         "col": "Preis",
         "head": "Preis €",
-        "style": "n",
+        "style": "sf",
         "align": "right",
         "media": "th-width-5",
         "sort": true,
