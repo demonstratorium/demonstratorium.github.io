@@ -1,6 +1,6 @@
 /* einkauf analytics app
    Muster: app_irgendwas.mjs
-   Daten: Einkaufsliste (k1) + Bestellungen (k2) — komprimiert als .zstd
+   Daten: Einkaufsliste (k1) + Bestellungen (k2) — als JSON
    10.000 Datensätze pro Tabelle
 */
 'use strict';
@@ -20,10 +20,10 @@ import { _ } from './lib.min.mjs';
     _.DATA[t] = d;
   }));
 
-  // Daten laden — komprimiert als .gzip
+  // Daten laden — als JSON (unkomprimiert)
   await Promise.all([
-    'k1.gzip'
-  , 'k2.zsd'
+    'k1.json'
+  , 'k2.json'
   ].map(async e => {
     const t = e.split('.')[0]
     ,     d = await _.D.gD(e, _.DATA['cfg_'+t]?.cfg?.tableDir || '');

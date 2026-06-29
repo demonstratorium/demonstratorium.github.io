@@ -78,7 +78,7 @@
     }
   },
   "cfg": {
-    "subheader": "10.000 Bestellungen · komprimiert als .zsd",
+    "subheader": "10.000 Bestellungen · JSON",
     "header": "📦 Bestellungen",
     "tableDir": "",
     "tableName": "k2",

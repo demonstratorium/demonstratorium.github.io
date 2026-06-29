@@ -60,7 +60,7 @@
     }
   },
   "cfg": {
-    "subheader": "10.000 Einkaufsartikel · komprimiert als .zsd",
+    "subheader": "10.000 Einkaufsartikel · JSON",
     "header": "📋 Einkaufsliste",
     "tableDir": "",
     "tableName": "k1",
