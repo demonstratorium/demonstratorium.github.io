@@ -1,0 +1,98 @@
+{
+  "info": "Bestellungen (10.000 Datensätze)",
+  "comment": "Generierte Bestelldaten mit Lieferanten- und Status-Dimensionen",
+  "views": {
+    "show": {
+      "p0": {
+        "col": "_id",
+        "head": "ID",
+        "style": "",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Bestell-ID"
+      },
+      "p1": {
+        "col": "Datum",
+        "head": "Datum",
+        "style": "",
+        "align": "left",
+        "media": "th-width-8",
+        "sort": true,
+        "colbez": "Bestelldatum"
+      },
+      "p2": {
+        "col": "Lieferant",
+        "head": "Lieferant",
+        "style": "f",
+        "align": "left",
+        "media": "th-width-12",
+        "sort": true,
+        "colbez": "Lieferantenname"
+      },
+      "p3": {
+        "col": "Artikel",
+        "head": "Artikel",
+        "style": "",
+        "align": "left",
+        "media": "th-width-10",
+        "sort": true,
+        "colbez": "Bestellter Artikel"
+      },
+      "p4": {
+        "col": "Menge",
+        "head": "Menge",
+        "style": "n",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Bestellte Menge"
+      },
+      "p5": {
+        "col": "Einheit",
+        "head": "Einheit",
+        "style": "",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Mengeneinheit"
+      },
+      "p6": {
+        "col": "Status",
+        "head": "Status",
+        "style": "f",
+        "align": "left",
+        "media": "th-width-8",
+        "sort": true,
+        "colbez": "Bestellstatus"
+      },
+      "p7": {
+        "col": "Betrag",
+        "head": "Betrag €",
+        "style": "n",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Gesamtbetrag in Euro"
+      }
+    }
+  },
+  "cfg": {
+    "subheader": "10.000 Bestellungen · komprimiert als .zsd",
+    "header": "📦 Bestellungen",
+    "tableDir": "",
+    "tableName": "k2",
+    "pageSize": 25,
+    "view": "show",
+    "startstop": false,
+    "maxPage": 0,
+    "page": 0,
+    "sort": ["dos", "_id", false],
+    "searchfields": ["Lieferant", "Artikel", "Status"],
+    "structure": ["_id", "Datum", "Lieferant", "Artikel", "Menge", "Einheit", "Status", "Betrag"],
+    "summary": ["Lieferant", "Status"],
+    "stats": ["Betrag", "Menge"],
+    "jfilter": {},
+    "sfilter": {}
+  }
+}
