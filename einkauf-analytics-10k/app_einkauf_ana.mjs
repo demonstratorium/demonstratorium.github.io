@@ -22,8 +22,8 @@ import { _ } from './lib.min.mjs';
 
   // Daten laden — komprimiert als .zsd (gzip)
   await Promise.all([
-    'k1.zsd'
-  , 'k2.zsd'
+    'k1.zstd'
+  , 'k2.zstd'
   ].map(async e => {
     const t = e.split('.')[0]
     ,     d = await _.D.gD(e, _.DATA['cfg_'+t]?.cfg?.tableDir || '');
