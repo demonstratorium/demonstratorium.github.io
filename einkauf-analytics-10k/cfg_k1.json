@@ -1,0 +1,80 @@
+{
+  "info": "Einkaufsartikel (10.000 Datensätze)",
+  "comment": "Generierte Einkaufsdaten mit Dimensions- und Wertespalten",
+  "views": {
+    "show": {
+      "p0": {
+        "col": "_id",
+        "head": "ID",
+        "style": "",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Artikel-ID"
+      },
+      "p1": {
+        "col": "Produkt",
+        "head": "Produkt",
+        "style": "",
+        "align": "left",
+        "media": "th-width-10",
+        "sort": true,
+        "colbez": "Produktname"
+      },
+      "p2": {
+        "col": "Menge",
+        "head": "Menge",
+        "style": "n",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Bestellte Menge"
+      },
+      "p3": {
+        "col": "Einheit",
+        "head": "Einheit",
+        "style": "f",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Mengeneinheit"
+      },
+      "p4": {
+        "col": "Kategorie",
+        "head": "Kategorie",
+        "style": "f",
+        "align": "left",
+        "media": "th-width-8",
+        "sort": true,
+        "colbez": "Produktkategorie"
+      },
+      "p5": {
+        "col": "Preis",
+        "head": "Preis €",
+        "style": "n",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Preis in Euro"
+      }
+    }
+  },
+  "cfg": {
+    "subheader": "10.000 Einkaufsartikel · komprimiert als .zsd",
+    "header": "📋 Einkaufsliste",
+    "tableDir": "",
+    "tableName": "k1",
+    "pageSize": 25,
+    "view": "show",
+    "startstop": false,
+    "maxPage": 0,
+    "page": 0,
+    "sort": ["dos", "_id", false],
+    "searchfields": ["Produkt", "Kategorie", "Einheit"],
+    "structure": ["_id", "Produkt", "Menge", "Einheit", "Kategorie", "Preis"],
+    "summary": ["Einheit", "Kategorie"],
+    "stats": ["Preis", "Menge"],
+    "jfilter": {},
+    "sfilter": {}
+  }
+}
