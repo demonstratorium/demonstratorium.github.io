@@ -1,0 +1,80 @@
+{
+  "info": "Familienausgaben (200 Datensätze)",
+  "comment": "Familienausgaben mit Datum, Kategorie, Betrag und Zahler",
+  "views": {
+    "show": {
+      "p0": {
+        "col": "_id",
+        "head": "ID",
+        "style": "",
+        "align": "left",
+        "media": "th-width-3",
+        "sort": true,
+        "colbez": "Laufende Nr."
+      },
+      "p1": {
+        "col": "Datum",
+        "head": "Datum",
+        "style": "",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Ausgabedatum"
+      },
+      "p2": {
+        "col": "Beschreibung",
+        "head": "Beschreibung",
+        "style": "",
+        "align": "left",
+        "media": "th-width-10",
+        "sort": true,
+        "colbez": "Ausgabenbeschreibung"
+      },
+      "p3": {
+        "col": "Kategorie",
+        "head": "Kategorie",
+        "style": "uf",
+        "align": "left",
+        "media": "th-width-8",
+        "sort": true,
+        "colbez": "Ausgabenkategorie"
+      },
+      "p4": {
+        "col": "Betrag",
+        "head": "Betrag €",
+        "style": "sf",
+        "align": "right",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Betrag in Euro"
+      },
+      "p5": {
+        "col": "Zahler",
+        "head": "Zahler",
+        "style": "uf",
+        "align": "left",
+        "media": "th-width-5",
+        "sort": true,
+        "colbez": "Wer hat bezahlt"
+      }
+    }
+  },
+  "cfg": {
+    "subheader": "200 Ausgaben · Jan 2025 – Jun 2026",
+    "header": "💰 Familienausgaben",
+    "tableDir": "",
+    "tableName": "d1",
+    "pageSize": 25,
+    "view": "show",
+    "startstop": false,
+    "maxPage": 0,
+    "page": 0,
+    "sort": ["dos", "Datum", false],
+    "searchfields": ["Beschreibung", "Kategorie", "Zahler"],
+    "structure": ["_id", "Datum", "Beschreibung", "Kategorie", "Betrag", "Zahler"],
+    "summary": ["Kategorie", "Zahler"],
+    "stats": ["Betrag"],
+    "jfilter": {},
+    "sfilter": {}
+  }
+}
