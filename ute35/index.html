@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ude 35 - Einkaufsliste</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#111;color:#eee}
+.gf-bar{display:flex;gap:.5rem;padding:.5rem 1rem;background:#222;flex-wrap:wrap}
+.gf-btn{background:#333;border:1px solid #555;color:#ccc;padding:.3rem .6rem;cursor:pointer;font-size:.9rem;border-radius:4px}
+.gf-btn.active{background:#0066cc;color:#fff;border-color:#0066cc}
+#app{margin:1rem}
+table{width:100%;border-collapse:collapse;background:#1a1a1a}
+th,td{border:1px solid #333;padding:.4rem;text-align:left}
+th{background:#222;color:#fff}
+.betrag{text-align:right}
+h1{color:#fff;padding:0 1rem}
+</style>
+</head>
+<body>
+<h1>Ude 35 - Haushaltsausgaben</h1>
+<div class="gf-bar" id="gf-bar"></div>
+<div id="app"></div>
+<script>
+// Standalone-Stripte ohne _-Lib-Abhängigkeit
+const kategorien = ['Versicherungen','Pkw','Nahrungsmittel','Sport','Sonstiges'];
+const L_KT = {'Versicherungen':'V1 - Versicherungen','Pkw':'V2 - Pkw','Nahrungsmittel':'V3 - Lebensmittel','Sport':'V4 - Sport'};
+
+// 5000 Zeilen generieren
+const daten = Array.from({length:5000},(_,i)=>{
+  const d = new Date(2020,0,1); d.setDate(d.getDate() + Math.random()*2000);
+  return {_id:i+1, datum:d.toISOString().split('T')[0], kategorie:kategorien[Math.floor(Math.random()*kategorien.length)], betrag:(Math.random()*500).toFixed(2)};
+});
+
+// PYY/PMM extrahieren
+daten.forEach(e=>{e.PYY='Y'+e.datum.slice(2,4); e.PMM='M'+e.datum.slice(5,7);});
+
+// Render
+function render(filterKategorie=''){
+  const rows = daten.filter(e=>!filterKategorie||e.kategorie===filterKategorie).slice(0,100);
+  let html = '<table><tr><th>ID</th><th>Datum</th><th>Kategorie</th><th>Betrag</th></tr>';
+  rows.forEach(e=>{html+=`<tr><td>${e._id}</td><td>${e.datum}</td><td>${L_KT[e.kategorie]||e.kategorie}</td><td class="betrag">${e.betrag} €</td></tr>`;});
+  html+='</table>';
+  document.getElementById('app').innerHTML = html;
+}
+
+// GF-Buttons
+const katVals = [...new Set(daten.map(d=>d.kategorie))];
+let gf = '';
+katVals.forEach(k=>{gf+=`<button class="gf-btn" onclick="window.location.hash='#${k}';render('${k}')">${L_KT[k]||k}</button>`;});
+gf+='<button class="gf-btn" onclick="window.location.hash=\'\';render(\'\')">Alle</button>';
+document.getElementById('gf-bar').innerHTML = gf;
+
+// Initial
+render('');
+</script>
+</body>
+</html>
