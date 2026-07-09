@@ -1,0 +1,23 @@
+{ "info" : "ute36"
+, "views" : { "show" : { "p0" : { "col" : "PID"       , "head" : "PID"         , "style" : ""         , "sort": true }
+                       , "p1" : { "col" : "SID"       , "head" : "Datum"       , "style" : ""         , "sort": true }
+                       , "p2" : { "col" : "PYM"       , "head" : "JahrMonat"   , "style" : "dGf"      , "sort": true }
+                       , "p3" : { "col" : "kategorie" , "head" : "Kategorie"   , "style" : "dGf"      , "sort": true }
+                       , "p4" : { "col" : "betrag"    , "head" : "Betrag"      , "style" : "betrag"   , "sort": true }
+                       , "p5" : { "col" : "bezeichnung", "head" : "Bezeichnung"  , "style" : ""         , "sort": true }
+                       }
+            }
+, "cfg" : { "header"       : "Ute 36 - Einkaufsliste"
+          , "tableName"    : "einkauf"
+          , "pageSize"     : 25
+          , "page"         : 0
+          , "GF"           : { "GP": {"f":"eF","k":"PYM"}, "GK":{"f":"eF","k":"kategorie"} }
+          , "jfilter"      : {}
+          , "sfilter"      : {}
+          , "searchvalues" : []
+          , "searchfields" : ["bezeichnung","kategorie","SID"]
+          , "view"         : "show"
+          , "sort"         : ["dos","PID",false]
+          , "structure"    : ["PID","SID","PYM","kategorie","betrag","bezeichnung"]
+          }
+}

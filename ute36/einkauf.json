@@ -1,0 +1,15 @@
+[
+ {"PID":"K0001","SID":"2026-06-08","PYM":"202606","kategorie":"Lebensmittel","betrag":"2.45","bezeichnung":"Brot Roggen"}
+,{"PID":"K0002","SID":"2026-06-09","PYM":"202606","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0003","SID":"2026-06-10","PYM":"202606","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0004","SID":"2026-07-04","PYM":"202607","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0005","SID":"2026-07-04","PYM":"202607","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0006","SID":"2026-07-04","PYM":"202607","kategorie":"Versicherung","betrag":"72.15","bezeichnung":"Haftpflicht COSMOS"}
+,{"PID":"K0007","SID":"2026-05-09","PYM":"202605","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0008","SID":"2026-05-10","PYM":"202605","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0009","SID":"2026-05-21","PYM":"202605","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0010","SID":"2026-04-03","PYM":"202604","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0011","SID":"2026-04-09","PYM":"202604","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0012","SID":"2026-04-02","PYM":"202604","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+,{"PID":"K0013","SID":"2026-04-01","PYM":"202604","kategorie":"PkW","betrag":"72.15","bezeichnung":"Benzin Super E5"}
+]
