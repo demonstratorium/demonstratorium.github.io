@@ -1,0 +1,22 @@
+{ "info" : "ute35"
+, "views" : { "show" : { "p1" : { "col" : "_id"     , "head" : "ID"       , "style" : ""         , "sort": true }
+                       , "p2" : { "col" : "datum"    , "head" : "Datum"    , "style" : ""         , "sort": true }
+                       , "p3" : { "col" : "PYY"      , "head" : "Jahr"     , "style" : "dGf"      , "sort": true }
+                       , "p4" : { "col" : "PMM"      , "head" : "Monat"    , "style" : "dGf"      , "sort": true }
+                       , "p5" : { "col" : "kategorie", "head" : "Kategorie", "style" : "dl"       , "sort": true }
+                       , "p6" : { "col" : "betrag"   , "head" : "Betrag"   , "style" : "betrag"   , "sort": true }
+                       }
+            }
+, "cfg" : { "header"       : "Ude 35 - Haushaltsausgaben"
+          , "tableName"    : "ute35"
+          , "pageSize"     : 25
+          , "page"         : 0
+          , "dlookup"      : "L_KT"
+          , "GF"           : { "PYY": {"f":"eF","k":"PYY"}, "PMM":{"f":"eF","k":"PMM"}, "kategorie":{"f":"eF","k":"kategorie"} }
+          , "jfilter"      : {}
+          , "sfilter"      : {}
+          , "searchvalues" : []
+          , "view"         : "show"
+          , "sort"         : ["dos","_id",false]
+          }
+}

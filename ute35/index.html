@@ -1,116 +1,44 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ude 35 - Haushaltsausgaben</title>
-<style>
-:root{--baseHue:210;--txt:#eee;--bg:#111;--head:#222;--accent:#0066cc}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:sans-serif;background:var(--bg);color:var(--txt);padding:1rem}
-h1{color:#fff;margin-bottom:.5rem}
-.gf-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
-.gf-btn{background:var(--head);border:1px solid #555;color:var(--txt);padding:.4rem .8rem;cursor:pointer;border-radius:4px;font-size:.9rem}
-.gf-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-table{width:100%;border-collapse:collapse;background:#1a1a1a}
-th,td{border:1px solid #333;padding:.5rem;text-align:left}
-th{background:var(--head);color:#fff}
-.betrag{text-align:right}
-.sum{background:#222;color:#4caf50;font-weight:bold}
-#stats{display:flex;gap:2rem;margin:1rem 0;color:#888;font-size:.9rem}
-#stats div{background:#1a1a1a;padding:.5rem 1rem;border-radius:4px}
-</style>
+  <meta charset="utf-8">
+  <meta name="description" content="Ude 35 — Haushaltsausgaben in Kategorien">
+  <meta name="keywords" content="haushalt, ausgaben, kategorien, demo">
+  <meta name="author" content="Steffen Wolf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="stylesheet" href="main.css">
+  <title>Ude 35 — Haushaltsausgaben</title>
 </head>
 <body>
-<h1>Ude 35 - Haushaltsausgaben</h1>
-<div class="gf-bar" id="gf-bar"></div>
-<div id="stats">
-  <div>Gesamt: <span id="sum-gesamt">0</span> €</div>
-  <div>Zeilen: <span id="cnt-rows">0</span></div>
-</div>
-<div id="app"></div>
-<script>
-const L_KT = {
-  'Versicherungen': 'V1 - Versicherungen',
-  'Pkw': 'V2 - Pkw/KFZ',
-  'Nahrungsmittel': 'V3 - Lebensmittel',
-  'Sport': 'V4 - Sport/Fitness',
-  'Sonstiges': 'V9 - Sonstiges'
-};
+  <!-- ICONS -->
+  <svg def id=icons style="display:none"></svg>
 
-// 5000 realistische Testdaten
-const daten = [];
-const kats = Object.keys(L_KT);
-const start = new Date('2023-01-01');
+  <!-- MODAL -->
+  <div class=modal>
+    <div class=modal-content>
+      <div class=modal-form><span>some</span></div>
+      <div class=form-group><label>&nbsp;</label><button id=formsave>OK</button></div>
+    </div>
+  </div>
 
-for(let i=0; i<5000; i++){
-  const d = new Date(start);
-  d.setDate(d.getDate() + Math.floor(Math.random() * 900)); // 3 Jahre
-  const betrag = (Math.random() * 400 + 5).toFixed(2); // 5-405 €
-  daten.push({
-    _id: i+1,
-    datum: d.toISOString().split('T')[0],
-    PYY: 'Y' + d.getFullYear().toString().slice(2),
-    PMM: 'M' + (d.getMonth()+1).toString().padStart(2,'0'),
-    kategorie: kats[Math.floor(Math.random() * kats.length)],
-    betrag: parseFloat(betrag)
-  });
-}
+  <!-- DATALISTS -->
+  <div id='datalists' style="display:none"></div>
 
-let filter = {PYY:'', PMM:'', kategorie:''};
+  <header>
+    <div><sup>🛒</sup> <strong>Ude 35</strong></div>
+    <div>Haushaltsausgaben · Kategorien</div>
+    <div><span id="info">...</span></div>
+  </header>
 
-function render(){
-  const rows = daten.filter(e=>{
-    if(filter.PYY && e.PYY !== filter.PYY) return false;
-    if(filter.PMM && e.PMM !== filter.PMM) return false;
-    if(filter.kategorie && e.kategorie !== filter.kategorie) return false;
-    return true;
-  });
-  
-  let html = '<table>';
-  html += '<tr><th>ID</th><th>Datum</th><th>Jahr/Monat</th><th>Kategorie</th><th>Betrag</th></tr>';
-  
-  const sum = rows.reduce((s,e)=>s+e.betrag,0);
-  document.getElementById('sum-gesamt').textContent = sum.toFixed(2);
-  document.getElementById('cnt-rows').textContent = rows.length;
-  
-  rows.slice(0,200).forEach(e=>{
-    html += `<tr>
-      <td>${e._id}</td>
-      <td>${e.datum}</td>
-      <td>${e.PYY}/${e.PMM}</td>
-      <td>${L_KT[e.kategorie] || e.kategorie}</td>
-      <td class="betrag">${e.betrag.toFixed(2)} €</td>
-    </tr>`;
-  });
-  
-  if(rows.length > 200){
-    html += `<tr class="sum"><td colspan="4">... + ${rows.length-200} weitere Zeilen</td><td class="betrag">${sum.toFixed(2)} €</td></tr>`;
-  }
-  html += '</table>';
-  document.getElementById('app').innerHTML = html;
-}
+  <section>
+    <main></main>
+  </section>
 
-// GF Buttons
-const years = [...new Set(daten.map(d=>d.PYY))].sort();
-const months = [...new Set(daten.map(d=>d.PMM))].sort();
-const kats = [...new Set(daten.map(d=>d.kategorie))].sort();
-
-let gf = '';
-gf += '<button class="gf-btn" onclick="setGF(\'PYY\',\'\')">Jahr: Alle</button>';
-years.forEach(y=>gf += `<button class="gf-btn" onclick="setGF('PYY','${y}')">${y}</button>`);
-gf += '<button class="gf-btn" onclick="setGF(\'PMM\',\'\')">Monat: Alle</button>';
-months.forEach(m=>gf += `<button class="gf-btn" onclick="setGF('PMM','${m}')">${m}</button>`);
-gf += '<button class="gf-btn" onclick="setGF(\'kategorie\',\'\')">Kategorie: Alle</button>';
-Object.entries(L_KT).forEach(([k,v])=>gf += `<button class="gf-btn" onclick="setGF('kategorie','${k}')">${v}</button>`);
-document.getElementById('gf-bar').innerHTML = gf;
-
-function setGF(col,val){
-  filter[col] = val;
-  render();
-}
-
-render();
-</script>
+  <footer>
+    &copy; 2026 by hermes@wolfsflow
+    <span class="badge">ute35 · demo · 5000 zeilen</span>
+  </footer>
 </body>
+<script async type="module" src="app_ute35.mjs"></script>
 </html>

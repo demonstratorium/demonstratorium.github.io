@@ -1,0 +1,6 @@
+{ "Versicherungen" : "V1 - Versicherungen"
+, "Pkw"            : "V2 - Pkw/KFZ"
+, "Nahrungsmittel" : "V3 - Lebensmittel"
+, "Sport"          : "V4 - Sport/Fitness"
+, "Sonstiges"      : "V9 - Sonstiges"
+}
