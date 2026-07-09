@@ -10,7 +10,9 @@ import { _ } from './lib.min.mjs';
     'einkauf.json'
   ].map(async e => {
     const t = e.split('.')[0];
-    _.DATA[t] = await _.D.gD(e);
+    // cfg_ute36.json → cfg_einkauf (weil tableName = "einkauf")
+    const key = (t === 'cfg_ute36') ? 'cfg_einkauf' : t;
+    _.DATA[key] = await _.D.gD(e);
   }));
 
   // ETL: PYY/PMM aus SID (YYYY-MM-DD) extrahieren
@@ -25,13 +27,13 @@ import { _ } from './lib.min.mjs';
   _.DATA['fs_einkauf'] = _.DATA['einkauf'];
 
   // Global-Filter auf cfg setzen
-  _.DATA['cfg_ute36']['cfg']['GF']['PYY'] = {'f':'eF','k':'PYY'};
-  _.DATA['cfg_ute36']['cfg']['GF']['PMM'] = {'f':'eF','k':'PMM'};
+  _.DATA['cfg_einkauf']['cfg']['GF']['PYY'] = {'f':'eF','k':'PYY'};
+  _.DATA['cfg_einkauf']['cfg']['GF']['PMM'] = {'f':'eF','k':'PMM'};
 
   // Tabelle registrieren
   _.GT.push('einkauf');
   _.GX['einkauf'] = {};
-  _.D.sT('einkauf', _.DATA['cfg_ute36']['cfg']);
+  _.D.sT('einkauf', _.DATA['cfg_einkauf']['cfg']);
   _.T.rf('einkauf');
 
   // Globale Filter anzeigen
