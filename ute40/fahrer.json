@@ -1,0 +1,50 @@
+[
+ {
+  "_id": "F001",
+  "name": "Hans Schmidt"
+ },
+ {
+  "_id": "F002",
+  "name": "Klaus M\u00fcller"
+ },
+ {
+  "_id": "F003",
+  "name": "Peter Weber"
+ },
+ {
+  "_id": "F004",
+  "name": "Thomas Fischer"
+ },
+ {
+  "_id": "F005",
+  "name": "Michael Wagner"
+ },
+ {
+  "_id": "F006",
+  "name": "Andreas Becker"
+ },
+ {
+  "_id": "F007",
+  "name": "Stefan Hoffmann"
+ },
+ {
+  "_id": "F008",
+  "name": "Uwe Schulz"
+ },
+ {
+  "_id": "F009",
+  "name": "Dirk Koch"
+ },
+ {
+  "_id": "F010",
+  "name": "Frank Richter"
+ },
+ {
+  "_id": "F011",
+  "name": "Markus Klein"
+ },
+ {
+  "_id": "F012",
+  "name": "Jens Wolf"
+ }
+]

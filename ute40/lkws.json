@@ -1,0 +1,62 @@
+[
+ {
+  "_id": "LKW001",
+  "typ": "MAN TGX",
+  "motor": "5.0L",
+  "tonnenKm": 0.85
+ },
+ {
+  "_id": "LKW002",
+  "typ": "Mercedes Actros",
+  "motor": "7.5L",
+  "tonnenKm": 0.9
+ },
+ {
+  "_id": "LKW003",
+  "typ": "Volvo FH",
+  "motor": "10.0L",
+  "tonnenKm": 0.95
+ },
+ {
+  "_id": "LKW004",
+  "typ": "Scania R",
+  "motor": "2.5L",
+  "tonnenKm": 1.0
+ },
+ {
+  "_id": "LKW005",
+  "typ": "DAF XF",
+  "motor": "5.0L",
+  "tonnenKm": 1.05
+ },
+ {
+  "_id": "LKW006",
+  "typ": "Iveco S-Way",
+  "motor": "7.5L",
+  "tonnenKm": 1.1
+ },
+ {
+  "_id": "LKW007",
+  "typ": "MAN TGX",
+  "motor": "10.0L",
+  "tonnenKm": 1.15
+ },
+ {
+  "_id": "LKW008",
+  "typ": "Mercedes Actros",
+  "motor": "2.5L",
+  "tonnenKm": 1.2
+ },
+ {
+  "_id": "LKW009",
+  "typ": "Volvo FH",
+  "motor": "5.0L",
+  "tonnenKm": 1.25
+ },
+ {
+  "_id": "LKW010",
+  "typ": "Scania R",
+  "motor": "7.5L",
+  "tonnenKm": 1.3
+ }
+]

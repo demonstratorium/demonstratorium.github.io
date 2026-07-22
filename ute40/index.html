@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Logistik Kreuztabellen 2025">
+  <meta name="keywords" content="logistik, lkw, pivot, kreuztabelle">
+  <meta name="author" content="Steffen Wolf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Ute 40" />
+  <meta property="og:description" content="Logistik · Kreuztabellen Kosten 2025" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="h4w_profile_v4.png" />
+  <link rel="icon" type="image/png" href="h4w_profile_v4.png">
+  <link rel="stylesheet" href="main.css">
+  <title>Ute 40 — Logistik</title>
+</head>
+<body>
+  <svg def id=icons style="display:none"></svg>
+  <div class=modal>
+    <div class=modal-content>
+      <div class=modal-form><span>some</span></div>
+      <div class=form-group>
+        <label>&nbsp;</label>
+        <button id=formsave>OK</button>
+      </div>
+    </div>
+  </div>
+  <div id='datalists' style="display:none"></div>
+  <header>
+    <div><img src="h4w_profile_v4.png" width="40"/><strong>Ute 40</strong></div>
+    <div>Logistik · KPIs 2025</div>
+    <div><span id="info">...</span></div>
+  </header>
+  <nav>
+    <input onclick="javascript:_['U']['tt']('lieferungen');false" type="checkbox" id="lbelieferungen" dtp="">
+    <label class="mofn widthx" for="lbelieferungen" title="Lieferungen">📦 1000</label>
+
+    <input onclick="javascript:_['U']['tt']('kunde_x');false" type="checkbox" id="lbkunde_x" dtp="">
+    <label class="mofn widthx" for="lbkunde_x" title="20 Kunden × 12 Monate">🎯 20</label>
+
+    <input onclick="javascript:_['U']['tt']('lkw_x');false" type="checkbox" id="lblkw_x" dtp="">
+    <label class="mofn widthx" for="lblkw_x" title="10 LKW × 12 Monate">🚛 10</label>
+  </nav>
+  <section><main></main></section>
+  <footer>
+    &copy; 2026 by hermes@wolfsflow
+    <span class="badge">ute40 · logistik · Kreuztabellen</span>
+  </footer>
+  <script async type="module" src="app_ute40.mjs"></script>
+</body>
+</html>
